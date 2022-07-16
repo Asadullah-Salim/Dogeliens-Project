@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/aos.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" href="js/dropdownstyle.js">
     <title>Dogeliens</title>
 </head>
 <body>
@@ -26,21 +27,7 @@
                     <div class="enter-btn">
                         <a style="float: right;" href="landing-page.html" class="btn-main1">Enter Site</a>
                         <div id="google_translate_element" style="float:right; margin-right:10px"></div>
-                        <script type="text/javascript">
-                            function googleTranslateElementInit() {
-                                new google.translate.TranslateElement({
-                                        pageLanguage: 'en',
-                                        includedLanguages:'en,es,fr,de,tr',
-                                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                                    },
-                                    'google_translate_element');
-                            }
-                        </script>
-                        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
-                        </script>
-                        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                                        </div>
-                    </div>
+                       
                     
                 
             </nav>
@@ -93,7 +80,68 @@
 
 
 </div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages:'en,es,fr,de,tr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            },
+            'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+</script>
+                </div>
+</div>
+<script defer>
+    $('document').ready(function () {
 
+
+// RESTYLE THE DROPDOWN MENU
+$('#google_translate_element').on("click", function () {
+
+// Change font family and color
+$("iframe").contents().find(".goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div, .goog-te-menu2 *")
+    .css({
+        'color': 'white',
+        'background':'rgba(255, 86, 33, 0)',
+        'font-family': '"Montserrat", sans-serif',
+                        'width':'100%',
+        'font-size':'15px'
+    });
+// // Change menu's padding
+$("iframe").contents().find('.goog-te-menu2-item-selected').css ('display', 'none');
+    
+        // Change menu's padding
+$("iframe").contents().find('.goog-te-menu2').css ('padding', '0px');
+
+// Change the padding of the languages
+$("iframe").contents().find('.goog-te-menu2-item div').css('padding', '10px');
+
+// Change the width of the languages
+$("iframe").contents().find('.goog-te-menu2-item').css('width', '100%');
+$("iframe").contents().find('td').css('width', '50%');
+
+
+// Change the iframe's size and position?
+$(".goog-te-menu-frame").css({
+    'width': '220px',
+    'height': 'auto',
+    'border-radius': '20px',
+    'margin-top': '5px',
+    'transition' : 'ease-in .1s'
+});
+// Change iframes's size
+$("iframe").contents().find('.goog-te-menu2').css({
+    'height': '100%',
+    'width': '100%',
+    'background':'rgba(255, 86, 33, 0.62)',
+   
+});
+});
+});
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scrollIt.min.js"></script>
